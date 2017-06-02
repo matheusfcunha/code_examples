@@ -1,0 +1,9 @@
+bagotaStatus = "solteiro"
+
+var queroNamorar = function() {
+    for (bagota_girlfriend = 0; bagota_girlfriend < 2; bagota_girlfriend++) {
+        bagotaStatus = "namorando"
+    };
+}
+
+console.log("O bagota está: " + bagotaStatus);

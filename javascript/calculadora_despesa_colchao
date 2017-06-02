@@ -1,0 +1,23 @@
+var distanciaInicial = 0;
+var precoGasolina = prompt("Qual o preço da gasolina");
+var value1 = parseInt(precoGasolina);
+var distanciaFinal = prompt("Qual a distancia do seu destino em KM?");
+var value2 = parseInt(distanciaFinal);
+var kmPorLitro = prompt("Quantos quilometros seu carro faz com 1 litro?");
+var value3 = parseInt(kmPorLitro);
+var gastoAdicional = prompt("Quais os gastos adicionais da viagem? Exemplo: Comida");
+var value4 = parseInt(gastoAdicional);
+var gastoIda = value1 / value3 * value2 + value4;
+var gastoVolta = gastoIda;
+var gastoDiario = prompt("Qual seu gasto diário?");
+parseInt(gastoDiario);
+var dias = prompt("Quantos dias você permanecerá?");
+parseInt(dias);
+var gastoTotal = Math.floor((gastoIda + gastoVolta + (gastoDiario * dias)));
+var precoColchao = 1500;
+var vendaColchao = 5000;
+var lucroVenda = precoColchao - vendaColchao;
+
+
+
+console.log("Você ira gastar " + gastoTotal + " Reais na sua viagem!");

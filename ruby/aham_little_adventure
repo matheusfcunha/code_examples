@@ -1,0 +1,54 @@
+
+class GameEvents
+    def self.start
+        player = Player.new
+        girl = Npc.new
+        puts "#{player.name} at the party..."
+        puts "Hello handsome, im #{girl.name.capitalize} wanna dance?"
+        puts "#{player.name} analyze the girl..."
+        puts "She is #{girl.skin_color} skin, and #{girl.hair_color} hair"
+        puts "Do you want to dance with her? ('yes' or 'no')"
+        answer = gets.chomp.downcase
+        case answer
+        when 'yes'
+            if girl.skin_color == 'pinky' && girl.hair_color == 'blonde'
+                puts "YEAH, LET'S DANCE"
+                puts "But then, #{player.name} realize that he doesn't know how to dance with a girl, go home and cried until sleep."
+                exit
+            else
+                puts "Hell NO, AHAM WOULD NEVER EVER  DANCE WITH A GIRL IF SHE WASN'T AT LEAST BLONDE, GOODBYE"
+                exit
+           end
+        when 'no'
+            girl = Npc.new
+        end
+    end
+end
+
+class Player
+    attr_accessor :name
+
+    def initialize
+        @name = 'Aham'
+    end
+end
+
+class Npc
+    Name = %w(cindy jessica jeniffer michaela linda).freeze
+    Skin = ['pinky', 'white', 'yellow', 'medium brown', 'brown', 'black'].freeze
+    Hair = %w(black blonde brown colored pink).freeze
+
+    def initialize
+        @name = Name[rand(Name.length)]
+        @skin_color = Skin[rand(Name.length)]
+        @hair_color = Hair[rand(Name.length)]
+    end
+
+    attr_reader :name
+
+    attr_reader :skin_color
+
+    attr_reader :hair_color
+end
+
+GameEvents.start while GameEvents.start != 'Game Over'

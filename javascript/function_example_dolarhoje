@@ -1,0 +1,8 @@
+var dollarToday = 3.10;
+
+var dollarPrice = function (reais) {
+    var price = reais * dollarToday;
+    console.log(price);
+};
+
+dollarPrice(prompt("Qual quantia você deseja saber em reais?"));

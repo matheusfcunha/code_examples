@@ -1,0 +1,22 @@
+var evenOrOdd = prompt("Choose even or odd!")
+var number = prompt("Pick your number between 0 and 10");
+var userChoice = parseInt(number);
+
+var computerChoiceFunction = function randomIntFromInterval(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+};
+
+var computerChoice = computerChoiceFunction(0,10)
+
+console.log("You choose:" + " " + evenOrOdd)
+console.log("Your Number:" + " " + userChoice)
+console.log("Computer:" + computerChoice);
+
+ var result = (userChoice + computerChoice) % 2
+
+if (result === 0) {
+  console.log("Even wins!")
+}
+  else {
+    console.log("Odd wins!")
+};

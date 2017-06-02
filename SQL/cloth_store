@@ -1,0 +1,21 @@
+CREATE TABLE products (id INTEGER PRIMARY KEY, product TEXT, tamanho TEXT, cor TEXT, tecido TEXT, price INTEGER);
+
+INSERT INTO products VALUES (1, "Camisa Coral", "M", "Amarelo", "Algodao", 45);
+INSERT INTO products VALUES (2, "Camisa Floral red", "M", "Vermelho", "Algodao", 120);
+INSERT INTO products VALUES (3, "Camisa Brazil 2017", "G", "Branco", "Algodao", 75);
+INSERT INTO products VALUES (4, "Camisa Dragon", "M", "Amarelo", "Algodao", 45);
+INSERT INTO products VALUES (5, "Camisa Argetina", "G", "Preto", "Algodao", 55);
+INSERT INTO products VALUES (6, "Camisa Beach negra", "P", "Preto", "Algodao", 80);
+INSERT INTO products VALUES (7, "Camisa Beach Amarela", "P", "Amarelo", "Algodao", 80);
+INSERT INTO products VALUES (8, "Camisa Coral Whitening", "M", "Branco", "Algodao", 80);
+INSERT INTO products VALUES (9, "Camisa Escarlate dozing", "M", "Vermelho", "Algodao", 120);
+INSERT INTO products VALUES (10, "Camisa Happy new year", "P", "Branco", "Algodao", 120);
+INSERT INTO products VALUES (11, "Camisa Curly braces", "M", "Preto", "Algodao", 55);
+INSERT INTO products VALUES (12, "Camisa New model 17", "G", "Vermelho", "Algodao", 75);
+INSERT INTO products VALUES (13, "Camisa Since ext 1991", "P", "Preto", "Algodao", 120);
+INSERT INTO products VALUES (14, "Camisa Floral yellow", "M", "Amarelo", "Algodao", 45);
+INSERT INTO products VALUES (15, "Camisa Miami Beach", "P", "Preto", "Algodao", 45);
+
+SELECT * FROM products ORDER BY price;
+
+SELECT product, tamanho FROM products ORDER BY tamanho;
